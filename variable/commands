@@ -1,0 +1,5 @@
+ terraform plan -var="ec2_instance_type=t3.micro" -var="ec2_instance_count=1"
+ terraform apply -var="ec2_instance_type=t3.micro" -var="ec2_instance_count=1"
+ terraform destroy -auto-approve
+ terraform plan -var="ec2_instance_type=t3.micro" -var="ec2_instance_count=1" -out out.plan 
+ terraform apply out.plan
