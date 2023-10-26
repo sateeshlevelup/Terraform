@@ -3,3 +3,5 @@
  terraform destroy -auto-approve
  terraform plan -var="ec2_instance_type=t3.micro" -var="ec2_instance_count=1" -out out.plan 
  terraform apply out.plan
+
+terraform apply -var-file="web.tfvars"
